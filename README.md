@@ -32,37 +32,80 @@ $ArrayInsertByMany[4]=1;
 $sql=InsertEasy("Nombre_Tabla",$ArrayInsertByMany);
 
 
+&nbsp;
 
-Usar la eliminacion de muchos registros de un datatable
+**Usar la eliminacion de muchos registros de un datatable**
 
 $_POST["ids"]="Un arreglo de id's obtenidos de la tabla";
+
+
+&nbsp;
 
 $sql= deleteAll("tb_Usuario",$_POST["ids"],"idUsuario");
 
 
-Usar la eliminacion de un solo usuario:
+&nbsp;
+
+
+**Usar la eliminacion de un solo usuario:**
 
 $sql= deleteItem("tb_Usuario",$_POST["id"],"idUsuario");
 
-Usar la funcion de cargar tablas de forma facil
+
+&nbsp;
+
+**Usar la funcion de cargar tablas de forma facil**
 
 $Iconos=[];
+
+
+&nbsp;
 array_push($Iconos, "fas fa-edit","fas fa-trash","fas fa-asterisk");
+
+
+&nbsp;
 $Colores=[];
+
+
+&nbsp;
 array_push($Colores, "text-success","text-danger","text-info");
+
+
+&nbsp;
 $Metodos=[];
+
+
+&nbsp;
 array_push($Metodos, "getUpdate","deleteItem","getUpdate");
+
+
+&nbsp;
 $FieldsVisible=array("idUsuario","NombreUsuario", "ApellidoP", "Celular","Nick");
-$table= LoadTableEasy($conn,"consulta`",$FieldsVisible,3,$Iconos,$Colores,$Metodos,1);
 
 
-Usar la funcion para obtener campos especificos
+&nbsp;
+$table= LoadTableEasy($conn,"consulta",$FieldsVisible,3,$Iconos,$Colores,$Metodos,1);
+
+
+&nbsp;
+
+
+**Usar la funcion para obtener campos especificos**
 
 $FieldsVisible=array("email","Celular","Edad","Sexo","Calle","Colonia","NumeroCasa","Nick","Pass","Rol","RutaImgPerfil","idUsuario");
+
+
+&nbsp;
 $sql= getUpdate("tb_Usuario",$FieldsVisible,$_POST["id"],"idUsuario");
 
-Usar la funcion para actualizar campos:
+
+&nbsp;
+
+**Usar la funcion para actualizar campos:**
 
 $FieldsVisible=array("email","Celular","Edad","Sexo","Calle","Colonia","NumeroCasa","Nick","Rol","RutaImgPerfil","Img_Product");
+
+
+&nbsp;
 $sql= update("tb_Usuario",$FieldsVisible,$_POST["id"],"idUsuario",$ArrayUpdate);
 
