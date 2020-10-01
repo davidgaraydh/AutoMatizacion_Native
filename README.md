@@ -2,14 +2,32 @@
 Funciones o clases que ayuden a crear o hacer cosas mas rapidamente en PHP nativo
 
 
-Usar la funcion de insercion facil:
+**Usar la funcion de insercion facil:**
 
 $ArrayInsertByMany=[];
+
+
+&nbsp;
 $ArrayInsertByMany[0]=$usuario;
+
+
+&nbsp;
 $ArrayInsertByMany[1]=$Accion;
+
+
+&nbsp;
 $ArrayInsertByMany[2]=$pantalla;
+
+
+&nbsp;
 $ArrayInsertByMany[3]=$rol;
+
+
+&nbsp;
 $ArrayInsertByMany[4]=1;
+
+
+&nbsp;
 
 $sql=InsertEasy("Nombre_Tabla",$ArrayInsertByMany);
 
